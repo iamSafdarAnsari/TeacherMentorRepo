@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>V.BABY Portfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+  <link rel="stylesheet" href="css/animate.css">
+
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+
+  <link rel="stylesheet" href="css/aos.css">
+
+  <link rel="stylesheet" href="css/ionicons.min.css">
+
+  <link rel="stylesheet" href="css/flaticon.css">
+  <link rel="stylesheet" href="css/icomoon.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    /*======================================
+//--//-->   ABOUT
+======================================*/
+
+    .about-mf .box-shadow-full {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+   
+
+    .about-mf .about-img {
+      margin-bottom: 2rem;
+    }
+
+    .about-mf .about-img img {
+      margin-left: 10px;
+    }
+
+    .skill-mf .progress {
+      /* background-color: #cde1f8; */
+      margin: 0.5rem 0 1.2rem;
+      border-radius: 0;
+      height: 0.7rem;
+    }
+
+    .skill-mf .progress .progress-bar {
+      height: 0.7rem;
+      background-color: #ffbd39;
+    }
+
+    /* Animation styles */
+    #typing-animation {
+      position: relative;
+      font-size: 30px;
+      font-weight: bold;
+      color: rgb(255, 255, 255);
+      overflow: hidden;
+      white-space: nowrap;
+      animation: typing 3s steps(20, end) infinite;
+    }
+
+    #typing-animation:before {
+      content: "";
+      /* position: absolute; */
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background-color: #ccc;
+      animation: typing-cursor 0.5s ease-in-out infinite;
+    }
+
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+
+      to {
+        width: 100%;
+      }
+    }
+
+    @keyframes typing-cursor {
+      from {
+        width: 5px;
+      }
+
+      to {
+        width: 0;
+      }
+    }
+
+    /* project image zoom effect */
+
+    .zoom-effect {
+      overflow: hidden;
+      transition: transform 0.3s ease-out;
+    }
+
+    .zoom-effect:hover {
+      transform: scale(1.1);
+    }
+
+    @media screen and (orientation: portrait) {
+      body {
+        margin-left: 5%;
+        margin-right: 5%;
+      }
+
+      .order-md-last {
+        visibility: hidden;
+      }
+
+      .about-img img {
+        content: url("images/about-me.jpg");
+        
+
+      }
+      
+    }
+  </style>
+
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html" style="color: rgb(195 98 39);">V.BABY</a>
+      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse"
+        data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="oi oi-menu"></span>
+        Menu
+      </button>
+
+      <div class="collapse navbar-collapse" id="ftco-nav">
+        <ul class="navbar-nav nav ml-auto">
+          <li class="nav-item">
+            <a href="#home-section" class="nav-link">
+              <span>Home</span></a>
+          </li>
+          <li class="nav-item">
+            <a href="#about-section" class="nav-link">
+              <span>About</span></a>
+          </li>
+          <li class="nav-item">
+            <a href="#resume-section" class="nav-link">
+              <span>Resume</span></a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact-section" class="nav-link">
+              <span>Contact</span></a>
+          </li>
+          <li class="nav-item">
+            <a href="#send-message" class="nav-link">
+              <span>Message me</span></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <section id="home-section" class="hero">
+    <div class="home-slider  owl-carousel">
+      <div class="slider-item ">
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end"
+            data-scrollax-parent="true">
+            <div class="one-third js-fullheight order-md-last img" style="background-image:url(images/me1.png); filter: brightness(80%) contrast(90%) saturate(50%)">
+              
+            </div>
+            <div class="one-forth d-flex  align-items-center ftco-animate"
+              data-scrollax=" properties: { translateY: '70%' }">
+              <div class="text">
+                <span class="subheading">Hello!</span>
+                <h1 class="mb-4 mt-3">I'm
+                  <span>V.BABY</span>
+                </h1>
+
+                <!-- Element to contain animated typing -->
+                <span id="typing-animation"></span>
+
+                <script>
+                  // Initialize the typing animation
+                  const typingAnimationElement = document.getElementById('typing-animation');
+
+                  // Create an array of typing text
+                  const typingTexts = ['Associate Professor'];
+
+                  // Create a function to display the typing animation for a given text
+                  function playTypingAnimation(text) {
+                    // Loop through each character and add it to the element
+                    for (let i = 0; i < text.length; i++) {
+                      setTimeout(() => {
+                        typingAnimationElement.textContent += text[i];
+                      }, i * 100); // Decreased delay to speed up the typing animation
+                    }
+
+                    // Once the animation is complete, reset the text and start over
+                    setTimeout(() => {
+                      typingAnimationElement.textContent = '';
+                      playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+                    }, text.length * 100); // Adjusted delay accordingly
+                  }
+
+                  // Start the typing animation loop
+                  playTypingAnimation(typingTexts[0]);
+                </script><br><br>
+                <!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+                <!-- <br> -->
+                <p>
+                  <a href="https://github.com/Baby-excel" class="btn btn-primary py-3 px-4">My GitHub</a>
+                  <a href="#"
+                    class="btn btn-white btn-outline-white py-3 px-4">My Linkedin</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    <div class="container">
+      <div class="row">
+        <div class="row d-flex align-items-stretch">
+          <!-- <div class="row d-flex"> -->
+          <div class="col-md-6 col-lg-5 d-flex">
+            <div class="img-about img d-flex align-items-stretch">
+              <div class="overlay">
+                <div class="row">
+                  <div class="col-sm-6 col-md-5">
+                    <div class="about-img">
+                      <img src="images/about-me.jpg" class="img-fluid rounded b-shadow-a" alt="">
+                    </div>
+                  </div>
+                  <!-- Details next to profile image -->
+                  <div class="col-sm-6 col-md-7">
+                    <div class="about-info">
+                      <p>
+                        <span class="title-s">Name:
+                        </span>
+                        <span>V.BABY</span>
+                      </p>
+                      <p>
+                        <span class="title-s">Job Role:
+                        </span>
+                        <span style="color:rgb(207, 129, 129);">Teacher</span>
+                      </p>
+                      <p>
+                        <!-- <span class="title-s">Experience: </span> <span>5 Years 3 Months</span></p> <p> -->
+                        <span class="title-s">Address:
+                        </span>
+                        <span> 28i/1,3rd kalaivani street,                                                  
+                          CN palayam kullankadu,                                            
+                           B.komarapalayam		 
+                          Tamil Nadu, India
+                           </span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="skill-mf">
+                  <p class="title-s">Skills</p>
+
+                  <span>Networking (.NET)</span>
+                  <!-- <span class="pull-right">99%</span> -->
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                  </div>
+
+                  <span>Javascript</span>
+                  <!-- <span class="pull-right">99%</span> -->
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 64%" aria-valuenow="64" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                  </div>
+
+                  <span>HTML</span>
+                  <!-- <span class="pull-right">99%</span> -->
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 79%" aria-valuenow="79" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                  </div>
+                  <span>CSS</span>
+                  <!-- <span class="pull-right">99%</span> -->
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 62%" aria-valuenow="62" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                  </div>
+
+                  <span>SQL</span>
+                  <!-- <span class="pull-right">95%</span> -->
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="60"
+                      aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                  <span>PHP</span>
+                  <!-- <span class="pull-right">85%</span> -->
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                  </div>
+
+                  <span>OS</span>
+                  <!-- <span class="pull-right">85%</span> -->
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 48%" aria-valuenow="48" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                  </div>
+                  <span>MySQL</span>
+                  <!-- <span class="pull-right">85%</span> -->
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 68%" aria-valuenow="68" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                  </div>
+                  <span>Python</span>
+                  <!-- <span class="pull-right">85%</span> -->
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 32%" aria-valuenow="32" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                  </div>
+                  <span>C & C++</span>
+                  <!-- <span class="pull-right">85%</span> -->
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 58%" aria-valuenow="58" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                  </div>
+
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+            <div class="row justify-content-start pb-3">
+              <div class="col-md-12 heading-section ftco-animate">
+
+                <h1 class="big">About</h1>
+                <h2 class="mb-4">About Me</h2>
+                <p> I am V. Baby, an Assistant Professor at Excel Engineering College with over four years of experience. I hold an M.Tech in IT from Anna University and have a strong passion for teaching, research, and technology. My expertise lies in image processing, data mining, and network security, with proficiency in Python, C, C++, .NET, and PHP. I have presented research papers at international conferences and guided student projects in e-learning and recommendation systems. Enthusiastic about lifelong learning, I have completed NPTEL and Udemy courses. Apart from academics, I enjoy stitching, internet surfing, and blogging about university question papers.</p>
+                <ul class="about-info mt-4 px-md-0 px-2">
+                  <li class="d-flex">
+                    <span>Profile:</span>
+                    <span> Assistant Professor </span>
+                  </li>
+                  <!-- <li class="d-flex">
+                    <span>Specialization:</span>
+                    <span>MERN Developer</span>
+                  </li> -->
+                  <li class="d-flex">
+                    <span>Education:</span>
+                    <span>M.Tech - Information Technology</span>
+                  </li>
+                  <li class="d-flex">
+                    <span>Language:</span>
+                    <span>English, Tamil,</span>
+                  </li>
+                  <li class="d-flex">
+                    <span>Interest:</span>
+                    <span>Image Processing, Data Mining, Open Source Systems,	Network Security,Python.
+                      </span>
+                  </li>
+                  <li>
+
+
+                    <span>Other Skills:</span>
+                    <ul>
+                      <li>
+                        <b>Public Speaking:</b>
+                      </li>
+                      <li>
+                        <b>Observational Skills:</b>
+                      </li>
+                      <li>
+                        <b>Creativity:</b>
+                      </li>
+                      <li>
+                        <b>Knowledge of Art Fundamentals:</b>
+                      </li>
+                      <li>
+                        <b>Technical Proficiency:</b>
+                      </li>
+                      <li>
+                        <b>Communication Skills:</b>
+                      </li>
+                      <li>
+                        <b>Time Management:</b>
+                      </li>
+                      <li>
+                        <b>Adaptability:</b>
+                      </li>
+                      <li>
+                        <b>Attention to Detail:</b>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="counter-wrap ftco-animate d-flex mt-md-3">
+              <div class="text">
+                <a href="#" class="btn btn-primary py-3 px-3">LinkedIn</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ftco-section ftco-no-pb" id="resume-section">
+    <div class="container">
+      <div class="row justify-content-center pb-5">
+        <div class="col-md-10 heading-section text-center ftco-animate">
+          <h1 class="big big-2">Resume</h1>
+          <h2 class="mb-4">Resume</h2>
+          <p>I am V. Baby, an experienced Assistant Professor at Excel Engineering College with over four years of teaching experience in Information Technology. I hold an M.Tech in IT from Anna University and a B.Tech in IT from the same university. Passionate about research and teaching, my key areas of expertise include image processing, data mining, open-source systems, network security, and Python programming.
+            <br>
+
+            I have presented research papers at national and international conferences, winning awards for my contributions. My research on machine learning for personalized nutrition and cybersecurity has been published in reputed journals. Additionally, I have guided several student projects, including E-learning management systems, e-waste management applications, and recommendation systems using machine learning.
+            <br>
+            My technical skills cover C, C++, Python, .NET, PHP, and SQL, with hands-on experience in network security and clustering algorithms. I am dedicated to continuous learning, having completed NPTEL and Udemy courses in Python and computing.
+            <br>
+            Apart from academics, I actively participate in faculty development programs, technical symposiums, and curriculum enhancements. I am also a blogger who shares university question papers for students. My hobbies include stitching, internet surfing, and listening to music. I am fluent in English and Tamil.</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <h1 class="big-4"><b>Projects</b></h1>
+        <div class="underline"></div>
+      </div>
+      <br>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="resume-wrap ftco-animate">
+            <span class="date">2024-Present</span>
+            <h2>Crop Identification Using Clustering Algorithm and Satellite Images
+            </h2>
+            <span class="position">
+              automated crop identification</span>
+            <p class="mt-4">This project focuses on automated crop identification using clustering algorithms applied to satellite imagery. The primary goal is to classify different types of crops based on spectral patterns, helping farmers and agricultural departments optimize land use and improve yield predictions.
+              The system uses unsupervised learning techniques like K-Means clustering to segment satellite images into different crop zones. Data preprocessing includes image enhancement, noise reduction, and feature extraction. The identified crop patterns are validated using real-time data from agricultural sources.
+              This project provides valuable insights for precision farming, disaster management, and efficient resource allocation. By automating the crop classification process, it reduces human effort, improves accuracy, and enhances agricultural productivity.
+            <!-- <ul>
+
+              <li><b>User Roles:</b> Admin, teachers, and students with role-based functionalities.
+              </li>
+              <li><b>Student & Course Management:</b> Enrollment, attendance, and course material uploads..</li>
+              <li> <b>Communication:</b> Messaging, notifications, and announcements.</li>
+              <li><b> Assessment:</b> Quizzes, exams, grading, and feedback.</li>
+              <li><b>Technology Stack:</b> React, Node.js, MongoDB Atlas, Cloudinary, JWT authentication.</li>
+            </ul> -->
+            </p>
+          </div>
+
+        </div>
+
+        <div class="col-md-6">
+          <div class="resume-wrap ftco-animate">
+            <span class="date">2024</span>
+            <h2>Tampering Avoidance Using Enhanced Random LSB Technique</h2>
+            <span class="position">Digital image tampering using LSB</span>
+            <p class="mt-4">
+              This project aims to detect and prevent digital image tampering using an enhanced Least Significant Bit (LSB) technique. It ensures the integrity of images by embedding a randomized, secure watermark into the least significant bits of an image.
+              
+              The system encrypts watermark data before embedding, making unauthorized modifications easily detectable. If any pixel is altered, the extraction process detects inconsistencies, flagging potential tampering.
+              
+              This method enhances image security in forensics, medical imaging, and digital signature verification, providing a robust solution against fraudulent image alterations. The approach is efficient, lightweight, and highly secure, making it ideal for real-world applications
+            <!-- <ul>
+              <li><b>User Authentication:</b>Secure login and profile management.</li>
+              <li><b>Product Management:</b>Catalog with sorting and filtering options.</li>
+              <li><b>Shopping Cart & Checkout:</b>Streamlined cart and secure payments.</li>
+              <li><b>Order Management:</b>Real-time tracking and admin panel for inventory.</li>
+              <li><b>Payment Gateway Integration:</b>Secure transactions via Stripe, PayPal, etc.</li>
+
+            </ul> -->
+            </p>
+          </div>
+          <div class="counter-wrap ftco-animate d-flex mt-md-3">
+            <div class="text">
+
+              <p class="mb-4"> <span class="number" data-number="32">0</span> <span>+</span> <span>&nbsp;
+                  Projects
+                  completed</span> </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <br>
+      <br>
+
+      <div class="row">
+        <h1 class="big-4">Education</h1>
+        <div class="underline"></div>
+      </div>
+      <br>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="resume-wrap ftco-animate">
+            <br>
+            <span class="date">2011-2013</span>
+            <h2>M.Tech - Information Technology</h2>
+            <span class="position">Vivekanandha College of Engineering for Women, Tiruchengode.</span>
+            <p class="mt-4">Current Status- Completed (2013)</p>
+            <p class="mt-4">Grade: CGPA - 6.57 <p>
+            <br>
+          </div>
+        </div>
+
+
+        <div class="col-md-6">
+          <div class="resume-wrap ftco-animate">
+            <br>
+            <span class="date">2022-2026</span>
+            <h2>B.Tech - Information Technology</h2>
+            <span class="position">Vivekanandha Institute of Engineering and Technology for Women,Tiruchengode.</span>
+            <p class="mt-4">Current Status- Completed (2010)</p>
+            <p class="mt-4">Grade: CGPA - 6.94</p>
+            <br>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="resume-wrap ftco-animate">
+            <br>
+            <span class="date">2006</span>
+            <h2>HSC</h2>
+            <span class="position">Sengunthar Matriculation Higher Secondary School, Erode..</span>
+            <p class="mt-4">Grade: A</p>
+            <br>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="resume-wrap ftco-animate">
+            <br>
+            <span class="date">2004</span>
+            <h2>SSLC</h2>
+            <span class="position">SSLC	S.P.B Higher Secondary School, <br> Erode.                           </span>
+            <p class="mt-4">Grade: A</p><br>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row justify-content-center mt-5">
+        <div class="col-md-6 text-center ftco-animate">
+          <p>
+            <!-- Here put the out CV -->
+            <a href="baby_cv.pdf" class="btn btn-primary py-4 px-5" target="_blank"
+              download="V.Baby">Download Resume</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+    <div class="hid" style="visibility:hidden">
+      <div class="container">
+        <div class="row d-md-flex align-items-center">
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="2">0</strong>
+                <span>Achievements</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="50">0</strong>
+                <span>Artworks</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+      <!-- <div class="container"> -->
+      <div class="row justify-content-center">
+        <div class="col-md-7 ftco-animate text-center">
+          <h2>Here's my<span>
+              <button id="gitbtn" class="btn btn-primary py-3 px-5" onclick="gitClick()">GitHub<button>
+            </span>
+          </h2>
+          <div class="heading">
+            <h4>
+              I love to teach .
+            </h4>
+            <br>
+          </div>
+        </div>
+      </div>
+      <!-- </div> -->
+    </div>
+  </section>
+
+  <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+    <div class="container">
+      <div class="row justify-content-center mb-5 pb-3">
+        <div class="col-md-7 heading-section text-center ftco-animate">
+          <h1 class="big big-2">Contact</h1>
+          <h2 class="mb-4">Contact Me</h2>
+          <p>Below are the details to reach out to me!</p>
+        </div>
+      </div>
+
+      <div class="row d-flex contact-info mb-5">
+        <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          <div class="align-self-stretch box p-4 text-center">
+            <div class="icon d-flex align-items-center justify-content-center">
+              <span class="icon-map-signs"></span>
+            </div>
+            <h3 class="mb-4">Address</h3>
+            <p>28i/1,3rd kalaivani street,                                                  
+              CN palayam kullankadu,B.komarapalayam		 
+              Tamil Nadu.                                                     
+              </p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          <div class="align-self-stretch box p-4 text-center">
+            <div class="icon d-flex align-items-center justify-content-center">
+              <span class="icon-phone2"></span>
+            </div>
+            <h3 class="mb-4">Contact Number</h3>
+            <p>
+              <a href="tel://6380485624">+91 6380485624</a>
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          <div class="align-self-stretch box p-4 text-center">
+            <div class="icon d-flex align-items-center justify-content-center">
+              <span class="icon-paper-plane"></span>
+            </div>
+            <h3 class="mb-4">Email Address</h3>
+            <p>
+              <a href="mailto:bs1989work@gmail.com">bs1989work@gmail.com</a>
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          <div class="align-self-stretch box p-4 text-center">
+            <div class="icon d-flex align-items-center justify-content-center">
+              <span class="icon-globe"></span>
+            </div>
+            <h3 class="mb-4">Download Resume</h3>
+            <p>
+              <!-- put the prosnol remume link here # -->
+              <a target="_blank" href="baby_cv.pdf">Click Here</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="container">
+          <br>
+          <br>
+          <div class="row justify-content-center">
+            <div class="col-md-7 ftco-animate text-center">
+              <h2>Have a<span>
+                  Question?
+                </span>
+              </h2>
+              <div class="que" id="send-message">
+                <form action="https://api.web3forms.com/submit" method="POST">
+                  <input type="hidden" name="access_key" value="deb3d3f0-afff-41cf-b78c-f68765734ea1">
+                  <div class="row gy-4 gy-xl-5 p-4 p-xl-5">
+                    <div class="col-12">
+                      <label for="fullname" class="form-label">Full Name
+                        <span class="text-danger">*</span></label>
+                      <input type="text" class="form-control" id="fullname" name="fullname" value=""
+                        required="required">
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <label for="email" class="form-label">Email
+                        <span class="text-danger">*</span></label>
+                      <div class="input-group">
+                        <span class="input-group-text">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-envelope" viewbox="0 0 16 16">
+                            <path
+                              d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
+                          </svg>
+                        </span>
+                        <input type="email" class="form-control" id="email" name="email" value="" required="required">
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <label for="phone" class="form-label">Phone Number</label>
+                      <div class="input-group">
+                        <span class="input-group-text">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-telephone" viewbox="0 0 16 16">
+                            <path
+                              d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                          </svg>
+                        </span>
+                        <input type="tel" class="form-control" id="phone" name="phone" value="">
+                      </div>
+                    </div><br>
+                    <div class="col-12">
+                      <label for="subject" class="form-label">Subject
+                        <span class="text-danger">*</span></label>
+                      <input type="text" class="form-control" id="subject" name="subject" value="" required="required">
+                    </div>
+                    <div class="col-12">
+                      <label for="message" class="form-label">Message
+                        <span class="text-danger">*</span></label>
+                      <textarea class="form-control" id="message" name="message" rows="3"
+                        required="required"></textarea>
+                    </div>
+                    <div class="col-12">
+                      <div class="d-grid"><br>
+                        <button class="btn btn-primary btn-lg" type="submit">Send Message</button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <br>
+          <ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+            <li class="ftco-animate normal-txt">Find me on
+            </li>
+            <li class="ftco-animate">
+              <a href="#">
+                <span class="icon-linkedin"></span></a>
+            </li>
+            <li class="ftco-animate">
+              <a href="#">
+                <span class="icon-twitter"></span></a>
+            </li>
+            <li class="ftco-animate">
+              <a href="#">
+                <span class="icon-facebook">
+                </span>
+              </a>
+            </li>
+            <li class="ftco-animate">
+              <a href="#">
+                <span class="icon-instagram"></span></a>
+            </li>
+          </ul>
+          <br>
+        </div>
+      </div>
+  </section>
+
+  <footer class="ftco-footer ftco-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+
+          <p style="display: none;">
+            Copyright &copy;
+            <script>
+              document.write(new Date().getFullYear());
+            </script>
+            All rights reserved | This template is made with
+            <i class="icon-heart color-danger" aria-hidden="true"></i>
+            by
+            <a href="https://colorlib.com" target="_blank">Colorlib</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen">
+    <svg class="circular" width="48px" height="48px">
+      <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+      <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+        stroke="#F96D00" />
+    </svg>
+  </div>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+
+  <script src="js/main.js"></script>
+  <script>
+    function gitClick() {
+      window.location.href = 'https://github.com/Baby-excel';
+    }
+  </script>
+
+</body>
+
+</html>
